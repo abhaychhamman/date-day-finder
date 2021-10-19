@@ -1,0 +1,14 @@
+git status 
+git add -A
+git commit -a -m "added"
+git push -u origin master 
+git branch
+git branch master 
+git checkout master 
+git init 
+git config --global user.name "abhay kumar singh"
+git config --global user.email "abhaysingh722@gmail.com"
+git config --list
+git push origin master --force
+git remote set-url origin git@github.com:abhaychhamman/python-problem.git
+git clone git@github.com:abhaychhamman/python-problem.git

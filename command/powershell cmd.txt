@@ -1,0 +1,41 @@
+ls/cd/gci/Get-ChildItem //use show file
+ Get-ChildItem -Name
+Get-ChildItem -Name -ReadOnly
+xcopy/cp/copy\Copy-Item  .\cmd.txt ".\abhay\"
+xcopy  *.txt ".\abhay\"
+move/mv/Move-item  .\cmd.txt ".\abhay\"
+del/remove-item abay.txt
+del *.txt
+md/mkdir/ abhay
+md "abhay singh"
+New-item "abhay.txt"
+type null > abhay1.txt //create file
+cls/clear
+get-command //show all cmd
+tasklist
+taskkill /pid 10048 // close software
+get-process cmd |stop-process //close software
+start-process notepad
+net start
+Get-Volume
+winver //check window version
+[System.Environment]::OSVersion.Version//check window version
+ wmic then bios get sabiosbiosversion //check biosversion
+nslookup www.facebook.com //info.
+Resolve-DnsName www.facebook.com //all dnsserver  
+(Get-Item 1.txt).Attributes='hidden'
+ attrib +h +r +s //hide file 
+  attrib -h -r -s//show file
+net user
+echo "hi my name is abhay" >1.txt
+notepad 1.txt
+ Set-Content 4.txt "this is abhay kumar singh"
+shutdown (-r or -s) -t 200
+ stop-computer
+restart-computer
+
+//this is cmd policy change
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+Get-ExecutionPolicy
+Get-ExecutionPolicy -list
+

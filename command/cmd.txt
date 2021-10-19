@@ -1,0 +1,25 @@
+*****start + cmd**** 
+winword
+powerpnt
+powershell
+chrome
+calc
+ *****other*****
+date 
+time
+calc
+cls //clear screen
+Exit
+Echo+msg
+erase+file_name
+mkdir+directory_name
+rmdir+directory_name(and also use 'rd')
+title +title_name
+start+file.exe
+cmd+?/ //basically use cmd info.
+color+ code_no(0,1,2,3and so on)
+query user
+query person
+tasklist
+taskkill /pid 10048 // close software
+
