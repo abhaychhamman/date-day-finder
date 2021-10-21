@@ -1,4 +1,3 @@
 *.temp
 .vscode
-project\rock paper scissors\rock_paper_scissors.exe
-project\guess game\guess_game.exe
+*.exe
