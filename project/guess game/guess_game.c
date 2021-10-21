@@ -7,7 +7,7 @@ void main()
     srand(time(0));
     int com_num = rand() % 100;
     int guess_count = 0;
-    printf("enter your number %d", com_num);
+    printf("enter your number ");
 
     while (1)
     {
