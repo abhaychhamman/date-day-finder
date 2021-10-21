@@ -1,3 +1,2 @@
-import math
-
-# print(math.floor(3/2))
+del dic(a)
+print(dic)
