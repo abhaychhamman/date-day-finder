@@ -1,2 +1,2 @@
-del dic(a)
-print(dic)
+
+dictt.update({'abhay',2})
