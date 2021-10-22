@@ -1,0 +1,3 @@
+
+        self.lst.append(trick)
+       
