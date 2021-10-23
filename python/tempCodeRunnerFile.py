@@ -1,2 +1,3 @@
-
-dictt.update({'abhay',2})
+res=dict()
+# for i in dict1:
+#     res[i]=list()
