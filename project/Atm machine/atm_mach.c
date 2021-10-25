@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-FILE *fp1, *fp2, *fp3;
+FILE *fp1, *fp2, *fp3, *fp4;
 int pin_verification()
 {
     int pin = 1234, user_get_pin;
@@ -27,30 +27,24 @@ void deposit()
     fp1 = fopen("atm.txt", "r");
     if (fp1 == NULL)
     {
-        printf("file does not exists\n");
+        fp3 = fopen("atm.txt", "w");
+        fprintf(fp3, "0");
+         fclose(fp3);
     }
-    else
-    {
-        if (fgets(ach, 50, fp1) == NULL)
-        {
 
-            x = 0;
-        }
-        while (fgets(ach, 50, fp1) != NULL)
-        {
-            printf("your already amount is %s[Rs.]\n", ach);
-            x = atoi(ach);
-        }
+    while (fgets(ach, 50, fp1) != NULL)
+    {
     }
+    x = atoi(ach);
+    printf("your already amount is %d [Rs.]\n", x);
     fclose(fp1);
 
     printf("enter your amount which you want to deposit[Rs.]\n");
     scanf("%d", &depo);
     fp2 = fopen("atm.txt", "w");
-    if (strlen(ach) > 1)
-    {
-        fprintf(fp2, "%d", x + depo);
-    }
+
+    fprintf(fp2, "%d", x + depo);
+
     printf("Now your rupees is %d\n", x + depo);
 
     fclose(fp2);
@@ -61,43 +55,42 @@ void withdraw()
     pin_verification();
     int withd, x;
     char ach[50];
-    fp1 = fopen("atm.txt", "r");
-    if (fp1 == NULL)
+    fp4 = fopen("atm.txt", "r");
+    if (fp4 == NULL)
     {
-        printf("file does not exists\n");
+        fp1 = fopen("atm.txt", "w");
+        fprintf(fp1, "0");
+         fclose(fp1);
     }
-    else
+
+    while (fgets(ach, 50, fp4) != NULL)
     {
-
-        while (fgets(ach, 50, fp1) != NULL)
-        {
-
-            x = atoi(ach);
-        }
     }
-    fclose(fp1);
+    x = atoi(ach);
+
+    fclose(fp4);
 
     printf("enter your amount which you want to withdraw[Rs.]\n");
     scanf("%d", &withd);
     fp2 = fopen("atm.txt", "w");
-    if (x - withd > 0 && x < withd)
+    if (x - withd > 0 && x >= withd)
     {
         fprintf(fp2, "%d", x - withd);
         printf("please wait a few second!.....\n");
 
-        for (size_t i = 0; i < 200000; i++)
+        for (size_t i = 0; i < 10000; i++)
         {
-            for (size_t i = 0; i < 10000; i++)
+            for (size_t i = 0; i < 400000; i++)
             {
             }
         }
-
-        printf("your available balence is: %d\n", x - withd);
+        printf("Your Transaction has been successfully!\n");
     }
-    else
+    if (x < withd)
     {
 
-        printf("your balence is :0 [Rs.].you are not withdraw amount!..\n");
+        printf("your balence is :%d [Rs.].you are not withdraw amount!..\n", x);
+        fprintf(fp2, "0");
     }
 
     fclose(fp2);
@@ -108,28 +101,22 @@ void check_balence()
     pin_verification();
     int withd, x;
     char ach[50];
-    fp1 = fopen("atm.txt", "r");
-    if (fp1 == NULL)
+    fp3 = fopen("atm.txt", "r");
+    if (fp3 == NULL)
     {
-        printf("file does not exists\n");
+        fp1 = fopen("atm.txt", "w");
+        fprintf(fp1, "0");
+        fclose(fp1);
     }
-    else
-    {
-        if (fgets(ach, 50, fp1) == NULL)
+    
+         
+        while (fgets(ach, 50, fp3) != NULL)
         {
-            printf("your balence is : 0 [Rs.]\n");
         }
-        else
-        {
-            while (fgets(ach, 50, fp1) != NULL)
-            {
-                printf("%s", ach);
-                x = atoi(ach);
-            }
-        }
-    }
-
-    fclose(fp1);
+        x = atoi(ach);
+        printf("your balence is available :%d\n", x);
+ 
+    fclose(fp3);
 }
 
 void dis_logic()
@@ -137,7 +124,7 @@ void dis_logic()
 
     int choice;
     printf("\n\n\nWelcome to our service\n");
-    printf("1.withdraw\n ");
+    printf("1.withdraw\n");
     printf("2.deposit amount\n");
     printf("3.check balence\n");
     printf("4.exit\n");
@@ -165,17 +152,16 @@ void dis_logic()
 
 int main()
 {
-    fp3 = fopen("atm.txt", "w");
-    fclose(fp3);
+
     while (1)
     {
         dis_logic();
-         for (size_t i = 0; i < 500000; i++)
+        printf("thanks , for using our services!\n");
+        for (size_t i = 0; i < 50000; i++)
         {
-            for (size_t i = 0; i < 10000; i++)
+            for (size_t i = 0; i < 100000; i++)
             {
             }
         }
-
     }
 }
