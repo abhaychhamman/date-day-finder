@@ -1,11 +1,15 @@
-from os import close
-import pyaudio
-import speech_recognition as rs
+import  pyaudio
+import  speech_r
 import pyttsx3 as p3
 from  gtts import gTTS
 from  playsound import  playsound
 import  webbrowser as web
 import pywhatkit as kit
+import  wikipedia
+from pywikihow import WikiHow,search_wikihow
+import os
+
+
 
 engine = p3.init()
 voices = engine.getProperty('voices')
@@ -69,7 +73,14 @@ def YoutubeSearch(term):
     Speak("this is may also help you sir")
 
 
+def Google_search(term):
+    query=term.replace("jarvis","")
+    query=query.replace("what is","")
+    query=query.replace("how to","")
+    query=query.replace("what is","")
+    query=query.replace("who is","")
+    print(term)
 
 listen()
-
+# Google_search("what is python")
 

@@ -9,5 +9,4 @@ for i in vote_count.keys():
     if vote_count[i]==max_votes:
         lst.append(i)
  
- 
 print(sorted(lst)[0])
