@@ -7,5 +7,10 @@ class Abhay:
        
 ab=Abhay("hello")
 ab.add_trick('hi how are you')
-print(ab.lst)
-Abhay.add_trick()
+ 
+ab.add_trick( "abhay")
+ab.add_trick("akash")
+j=" "
+for i in ab.lst:
+    j+=i+" "
+print(ab.name+j)

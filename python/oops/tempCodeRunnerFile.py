@@ -1,3 +1,2 @@
 
-        self.lst.append(trick)
-       
+print(ab.name,ab.da)
