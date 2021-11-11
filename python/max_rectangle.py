@@ -1,11 +1,11 @@
 print("Hi! EveryOne")
-graph=[6,5,2,4,3,2]
+graph=[6,0,0,4,3,2]
 adder=0
 pos_area=[]
  
-for i in range(6):
+for i in range(max(graph)):
     for j in range(len(graph)):
-        if graph[j]==i:
+        if graph[j]<=i:
             pos_area.append(adder* (i+1))
             adder=0
         else:
