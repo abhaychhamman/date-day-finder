@@ -1,56 +1,55 @@
-* {
-    background-color: black;
+body {
+    background-color: aliceblue;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+    overflow: hidden;
+    background-image: url(img/laura-smetsers-St08jKkPVHw-unsplash.jpg);
 }
 
-.right {
-    height: 75px;
-    width: 145px;
-    background-color: rgb(248, 0, 0);
-    position: relative;
-    top: -73px;
-    left: 50px;
-    transform: rotate( 136deg);
-    border-bottom-left-radius: 100px;
-    border-top-left-radius: 100px;
-}
-
-.right::before {
-    content: " ";
-    padding: 14px;
-    padding-left: 0px;
-    height: 48px;
+.aero {
+    background-image: url(img/airplane-png-27938.png);
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 400px;
     position: absolute;
-    top: 38px;
-    left: 39px;
-    animation: anmate 1s infinite alternate;
-    width: 137px;
-    background-color: rgb(248, 0, 0);
-    transform: rotate( 269deg);
-    border-bottom-left-radius: 100px;
-    border-top-left-radius: 100px;
+    top: 55%;
+    right: 5%;
+    animation: animate 15s infinite;
 }
 
-.animation {
-    animation: anmate 1s infinite alternate;
+.aero1 {
+    background-image: url(img/airplane-png-27938.png);
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 400px;
+    position: absolute;
+    top: 55%;
+    right: -50%;
+    animation: animate1 20s infinite;
+    animation-delay: 5s;
 }
 
-@keyframes anmate {
+@keyframes animate {
     0% {
-        box-shadow: 0px 0px 5px 0px #e90404;
-    }
-    50% {
-        box-shadow: 0px 0px 15px 0px #e90404;
+        right: -50%;
+        top: 45%;
     }
     100% {
-        box-shadow: 0px 0px 25px 0px #e90404;
+        right: 110%;
+        top: -5%;
     }
 }
 
-.fix {
-    height: 80px;
-    position: absolute;
-    ;
-    top: 40%;
-    left: 40%;
-    width: 200px;
+@keyframes animate1 {
+    0% {
+        right: -50%;
+        top: 65%;
+    }
+    100% {
+        right: 110%;
+        top: -10%;
+    }
 }
