@@ -17,9 +17,9 @@ void main()
     int fact;
     int value;
     printf("enter your value \n");
-    scanf("%d",&value);
+    scanf("%d", &value);
 
-    for (int i = 1; i <=value; i++)
+    for (int i = 1; i <= value; i++)
     {
 
         // factorial function call here
@@ -34,7 +34,6 @@ void main()
         {
             cal -= 1.0 / fact;
         }
-        
     }
-printf("value of series is :  %.3f\n\n", cal);
+    printf("value of series is :  %.3f\n\n", cal);
 }
